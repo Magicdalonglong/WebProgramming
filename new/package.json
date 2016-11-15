@@ -1,0 +1,12 @@
+{
+  "name": "new",
+  "version": "0.0.1",
+  "description": "A simple calulator",
+  "main": "app.js",
+  "scripts": {
+  	"start": "node cal_app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lei Duan",
+  "license": "MIT"
+}
