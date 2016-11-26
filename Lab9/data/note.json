@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "NoteTitle": "note1",
+        "NoteDueDate": "2016/11/16",
+        "NoteSummary": "do 546 home work",
+        "NoteBody": "learn ajax, xss and jqeury"
+    },
+    {
+        "id": 1,
+        "NoteTitle": "Xss",
+        "NoteDueDate": "2016/11/25",
+        "NoteSummary": "<script>alert(\"Do some naive attack\");</script>",
+        "NoteBody": "<script>alert(\"Do some naive attack\");</script>"
+    },
+    {
+        "id": 2,
+        "NoteTitle": "do homework",
+        "NoteDueDate": "2016/11/25",
+        "NoteSummary": "trying to do homework",
+        "NoteBody": "seems to submit late. oh no."
+    },
+    {
+        "id": 3,
+        "NoteTitle": "Buy Buy Buy",
+        "NoteDueDate": "2016/11/24",
+        "NoteSummary": "black friday, here we go",
+        "NoteBody": "do not have money, \nok my list is clean"
+    },
+    {
+        "id": 4,
+        "NoteTitle": "Coming Together On Thanksgiving",
+        "NoteDueDate": "2016/11/27",
+        "NoteSummary": "Coming Together On Thanksgiving",
+        "NoteBody": "In this week's address, President Obama wished the American people a happy Thanksgiving. Thanksgiving reminds us that no matter our differences, we are still one people, part of something bigger than ourselves. Because what makes us American are the ideals to which we pledge our allegiance. And it's about our ability to live up to the creed \"E Pluribus Unum\" -- that out of many, we are one."
+    },
+    {
+        "id": 5,
+        "NoteTitle": "Together, We Make Change Happen",
+        "NoteDueDate": "2016/11/30",
+        "NoteSummary": "Together, We Make Change Happen",
+        "NoteBody": "When President Obama took office, we were facing the worst economic crisis since the Great Depression. Seven years later, our businesses have created 14.1 million new jobs over the past 70 months. We’ve rebuilt our manufacturing base, reformed our health care system, and reinvented our energy sector. We’ve welcomed home more than 160,000 troops.\n\nWe are living through an extraordinary moment in human history. Technological and social change is reshaping the way we live, the way we work, our environment, and our place in the world. But as Americans, we’ve been through big changes before and, like generations past, we can make change work for us. In his speech, President Obama laid out his plan to seize opportunities before us.  In looking forward, there are four big questions that we as a country have to answer."
+    }
+]

@@ -1,0 +1,18 @@
+<input hidden value="{{note.id}}" id="A_naive_way_to_get_the_id"/>
+
+<h1 id = "noteh1">Note {{note.id}}</h1>
+
+<div id ="contenttable">
+<ul>
+        <li><b> Title:</b><span id="NoteTitle">{{note.NoteTitle}}</span></li>
+        <li><b>DueDate:</b> <span id="NoteDueDate">{{note.NoteDueDate}}</span></li>
+        <li><b>Summary:</b> <span id="NoteSummary">{{note.NoteSummary}}</span></li>
+        <li><b>Body:</b> <span id="NoteBody">{{note.NoteBody}}</span></li>      
+    
+</ul>
+</div>
+<button type="submit" class="btn btn-default" id="addnewnote">Add New Note</button>
+<button type="button" class="btn btn-default" id="backtolist">Back to Note List</button>
+<button type="button" class="btn btn-default" id="next">Next Note</button>
+<div class="alert alert-danger hidden" id="form-alert">
+</div>
