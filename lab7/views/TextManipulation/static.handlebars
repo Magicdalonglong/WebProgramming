@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12">
+    <form id="static-form" method="post">
+      <h1>Text Manipulation on Client</h1>
+      
+
+      <div class="form-group">
+        <label for="text_area">Text Area</label>
+        <textarea class="form-control" id="text_area" name="text" placeholder="text"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="string">String</label>
+        <input type="text" class="form-control" id="string" name="string" placeholder="String to be inserted" value="{{String}}">
+      </div>
+
+      <div class="form-group">
+        <label for="number">Number</label>
+        <input type="number" class="form-control" id="number" name="number" placeholder="how many time the string will be inserted" value="{{Number}}">
+      </div>
+
+       <div class="form-group">
+        <label for="distance">Distance</label>
+        <input type="number" class="form-control" id="distance" name="distance" placeholder="distance btw two inserted string" value="{{Distance}}">
+      </div>
+
+
+      <div class="form-group hidden" id="error-container">
+        <div class="alert alert-danger text-goes-here">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+      <div class="form-group hidden" id="result-container">
+        <div class="alert alert-success text-goes-here">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

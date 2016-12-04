@@ -34,8 +34,8 @@ let exportedMethods = {
             console.log(`No note found by id ${noteid}`);
             return Promise.reject("No note found");     
         }
-        note.NoteSummary = xss(note.NoteSummary);
-        note.NoteBody = xss(note.NoteBody);
+       // note.NoteSummary = xss(note.NoteSummary);
+       // note.NoteBody = xss(note.NoteBody);
         return Promise.resolve(note);   
         
     },

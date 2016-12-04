@@ -40,5 +40,12 @@
         "NoteDueDate": "2016/11/30",
         "NoteSummary": "Together, We Make Change Happen",
         "NoteBody": "When President Obama took office, we were facing the worst economic crisis since the Great Depression. Seven years later, our businesses have created 14.1 million new jobs over the past 70 months. We’ve rebuilt our manufacturing base, reformed our health care system, and reinvented our energy sector. We’ve welcomed home more than 160,000 troops.\n\nWe are living through an extraordinary moment in human history. Technological and social change is reshaping the way we live, the way we work, our environment, and our place in the world. But as Americans, we’ve been through big changes before and, like generations past, we can make change work for us. In his speech, President Obama laid out his plan to seize opportunities before us.  In looking forward, there are four big questions that we as a country have to answer."
+    },
+    {
+        "id": 6,
+        "NoteTitle": " <script>alert(\"Do some naive attack\");</script>",
+        "NoteDueDate": "2016/11/30",
+        "NoteSummary": " <script>alert(\"Do some naive attack\");</script>",
+        "NoteBody": " <script>alert(\"Do some naive attack\");</script>"
     }
 ]

@@ -15,6 +15,7 @@
     var nextbtn = $("#next");
     var addnewnotebtn = $("#addnewnote");
     var noteidh1 = $("#A_naive_way_to_get_the_id");
+    var testbtn = $("#testbtn");
     datepicker.datepicker();
     datepicker.datepicker("option", "dateFormat", "yy/mm/dd");
 
@@ -22,6 +23,13 @@
 
     $(".clickable-row").click(function() {
         window.location.href = $(this).data("href");
+    });
+
+    testbtn.click(function () {
+        console.log('title is '+title.val());
+        console.log('summary is '+summary.val());
+        console.log('noteBody is '+noteBody.val());
+        console.log('datepicker is '+datepicker.val());
     });
 
 

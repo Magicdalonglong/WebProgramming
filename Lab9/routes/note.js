@@ -1,10 +1,4 @@
-"use strict";
-/*
- Created by lx on 2016/11/17
- Name: Xuan Li
- CWID:10409939
- Email: xli100@stevens.edu
- */
+
 const express = require('express');
 const router = express.Router();
 const fileDate = require("../data/file");
@@ -16,8 +10,8 @@ let notFound = "misc/debug";
 router.get("/", (req, res) => {
     var noteList = fileDate.getAllNote().then((noteList) => {
         for(var note in noteList) {
-            noteList[note].NoteSummary = xss(noteList[note].NoteSummary);
-            noteList[note].NoteBody = xss(noteList[note].NoteBody);
+       //     noteList[note].NoteSummary = xss(noteList[note].NoteSummary);
+        //    noteList[note].NoteBody = xss(noteList[note].NoteBody);
         }
         res.render("examples/noteList", {noteList: noteList});
     }).catch(() => {
