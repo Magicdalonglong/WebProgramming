@@ -45,6 +45,17 @@ var user = [{
         Profession: 'Chief of the Beggars\' Sect',
         Bio: 'Qiao Feng is the charismatic chief of the Beggars\' Sect who possesses strong leadership qualities and exceptional prowess in martial arts. He falls from grace after he is revealed to be a Khitan, and after he is wrongly accused of murdering some fellow martial artists. He becomes an outcast of the wulin (martial artists\' community) of the Han Chinese-dominated Song Empire, which is at war with the Khitan-led Liao Empire. Qiao Feng\'s relations with the Han Chinese martial artists worsen due to the Song–Liao conflict, and also because he is now seen as a murderer and a threat to the wulin. He is forced to sever ties with them and engage them in a one-against-several battle, in which he singlehandedly kills many opponents, including some of his old friends and acquaintances.',
         Password: '$2a$10$/rIi.BLtPzlEaT8y9KeKx.R2/LQGs48PPRnbY2r7yRD5R0Nqx3Zae'
+    },
+    {
+        _id: uuid.v4(),
+        myid : 5,
+        username: 'huangyingting',
+        displayname : '黄颖婷',
+        First_Name: 'YingTing',
+        Last_Name: 'Huang',
+        Profession: 'Daughter',
+        Bio: 'Famous new master student of 2016 fall, majoring EE',
+        Password: '$2a$10$QgzHWH0xxEpVwcshvb/Q3.MHYjSGvMy6QotaV5GeuUZ.7FW4lXDYi'
     }
 
 ]

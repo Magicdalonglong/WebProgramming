@@ -27,6 +27,9 @@
         case 4:
             mainbody.style.backgroundImage = "url('https://i.ytimg.com/vi/SqGv3TvXnAg/maxresdefault.jpg')";
             break;
+        case 5:
+            mainbody.style.backgroundImage = "url('https://pbs.twimg.com/media/Cy4RrOzUkAAb7kV.jpg')";
+            break;
         default:
             // statements_def
             break;

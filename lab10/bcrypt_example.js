@@ -28,11 +28,11 @@ let hashedPassword2 = new Promise((resolve, reject) => {
 });
 
 let hashedPassword3 = new Promise((resolve, reject) => {
-    bcrypt.hash("loveazhu", null, null, function(error, hash) {
+    bcrypt.hash("aibaba", null, null, function(error, hash) {
         if (error) {
             reject(error);
         } else {
-            console.log("loveazhu is " + hash);
+            console.log("aibaba is " + hash);
         }
     });
 });
