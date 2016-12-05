@@ -1,63 +1,37 @@
 (function($) {
     // Let's start writing AJAX calls!
 
-
+    var id = parseInt($("#iddiv").val());
+    console.log('id is ' + id);
+    console.log('typeof id is ' + typeof id);
     var logoutbtn = $("#logout");
- 
-    logoutbtn.click(function () {
+
+    logoutbtn.click(function() {
         console.log('logoutbtn clicked');
-        window.location.href='/logout'
-        /* body... */
+        window.location.href = '/logout'
+            /* body... */
     });
 
+    let mainbody = document.getElementById("full");
+
+    switch (id) {
+        case 1:
+            mainbody.style.backgroundImage = "url('http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2013/06/Sherlock_Quiz_1600x720.jpg')";
+            break;
+        case 2:
+            mainbody.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/en/c/c0/Liz_Lemon_promo_pic.jpg')";
+            break;
+        case 3:
+            mainbody.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgTdCgm0oe8m8L_B2gcOq6X3scTkJ_gDXy0xHuBpkw-pFOyE6qgw')";
+            break;
+        case 4:
+            mainbody.style.backgroundImage = "url('https://i.ytimg.com/vi/SqGv3TvXnAg/maxresdefault.jpg')";
+            break;
+        default:
+            // statements_def
+            break;
+    }
 
 
-    // LoginForm = document.getElementById("Form");
-
-    // var usernameele = $("#Username");
-    // var passwordele = $("#Password");
-    // var newName = usernameele.val();
-    // var passWord = passwordele.val();
-
-
-    // $("#test").click(function() {
-    //     console.log('username is ');
-    //     console.log(newName);
-    //     console.log('passWord is');
-    //      console.log(passWord);
-    // });
-
-    // if (false) {
-
-        
-    //     LoginForm.submit(function(event) {
-    //         event.preventDefault();
-
-    //         var newName = usernameele.val();
-    //         var passWord = passwordele.val();
-
-    //         if (newName && passWord) {
-    //             var requestConfig = {
-    //                 method: "POST",
-    //                 url: "/login",
-    //                 contentType: 'application/json',
-    //                 data: JSON.stringify({
-    //                     username: newName,
-    //                     password: passWord
-    //                 })
-    //             };
-
-    //             $.ajax(requestConfig).then(function(responseMessage) {
-    //                 console.log(responseMessage);
-    //                 if (responseMessage.status === "success") 
-    //                     console.log('POST successed');
-    //                 else
-    //                     console.log('POST failed');
-    //             //    newContent.html(responseMessage.message);
-    //                 //                alert("Data Saved: " + msg);
-    //             });
-    //         }
-    //     });
-    // }
 
 })(window.jQuery);

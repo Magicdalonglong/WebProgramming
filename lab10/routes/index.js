@@ -6,14 +6,11 @@ var passport = require('passport');
 const constructorMethod = (app) => {
     app.post('/login',
         passport.authenticate('local', {
-            failureRedirect: '/'
-        }),
-        function(req, res) {
-            console.log('authenticate success, user is ' + req.user);
-            res.redirect('/private');
-        });
-
-
+            successRedirect: '/private',
+            failureRedirect: '/',
+            failureFlash: true
+        })
+    );
 
     app.get('/private',
         require('connect-ensure-login').ensureLoggedIn(),
@@ -32,7 +29,9 @@ const constructorMethod = (app) => {
         } else {
             console.log('rendering the form');
 
-            res.render('partials/loginform', {});
+            res.render('partials/loginform', {
+                message: req.flash('message')
+            });
         }
 
     });
@@ -42,6 +41,10 @@ const constructorMethod = (app) => {
             req.logout();
             res.redirect('/');
         });
+
+    
+
+
 
     app.use("*", (req, res) => {
         res.sendStatus(404);

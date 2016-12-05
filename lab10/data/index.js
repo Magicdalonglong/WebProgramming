@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt-nodejs");
 
 var user = [{
         _id: uuid.v4(),
+        myid : 1,
         username: 'masterdetective123',
         displayname : 'Sherlock Holmes',
         First_Name: 'Sherlock',
@@ -12,6 +13,7 @@ var user = [{
         Password: '$2a$10$BoT5q0.lXtM3..qi60f.oe/VpxbTz6LuaF5tHZ8FkprydmKUGT0pW'
     }, {
         _id: uuid.v4(),
+        myid : 2,
         username: 'lemon',
         displayname : 'Liz Lemon',
 
@@ -24,6 +26,7 @@ var user = [{
 
     {
         _id: uuid.v4(),
+        myid : 3,
         username: 'theboywholived',
         displayname : 'Harry Potter',
         First_Name: 'Harry',
@@ -31,29 +34,20 @@ var user = [{
         Profession: 'Student',
         Bio: 'Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the life of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry . The main story arc concerns Harry\'s struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles.',
         Password: '$2a$10$RMPATnIsGSNWt/zS0hte8emsI4zsPOcPdw1aAyM.2AVQr/GBmmOk2'
+    },
+    {
+        _id: uuid.v4(),
+        myid : 4,
+        username: 'qiaofeng1060',
+        displayname : 'Qiao Feng',
+        First_Name: 'Feng',
+        Last_Name: 'Qiao',
+        Profession: 'Chief of the Beggars\' Sect',
+        Bio: 'Qiao Feng is the charismatic chief of the Beggars\' Sect who possesses strong leadership qualities and exceptional prowess in martial arts. He falls from grace after he is revealed to be a Khitan, and after he is wrongly accused of murdering some fellow martial artists. He becomes an outcast of the wulin (martial artists\' community) of the Han Chinese-dominated Song Empire, which is at war with the Khitan-led Liao Empire. Qiao Feng\'s relations with the Han Chinese martial artists worsen due to the Song–Liao conflict, and also because he is now seen as a murderer and a threat to the wulin. He is forced to sever ties with them and engage them in a one-against-several battle, in which he singlehandedly kills many opponents, including some of his old friends and acquaintances.',
+        Password: '$2a$10$/rIi.BLtPzlEaT8y9KeKx.R2/LQGs48PPRnbY2r7yRD5R0Nqx3Zae'
     }
 
 ]
-
-
-
-
-
-// let compareFirstPassword = hashedPassword.then(function(hash) {
-//     return new Promise((resolve, reject) => {
-
-//         // Load hash from your password DB.
-//         bcrypt.compare("merlinsbeard", hash, function(error, res) {
-//             if (res === true) {
-//                 console.log("merlinsbeard maches the hash");
-//                 resolve(resolve);
-//             } else {
-//                 reject(error);
-//                 console.log("merlinsbeard does not match the hash");
-//             }
-//         });
-//     });
-// });
 
 
 exports.findOne = function(username, password) {

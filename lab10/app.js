@@ -5,33 +5,6 @@ const UserData = require('./data');
 var LocalStrategy = require('passport-local').Strategy;
 
 
-passport.use(new LocalStrategy(
-    function(username, password, done) {
-        UserData.findOne(username,password).then(res => {
-            console.log('user test found :');
-            console.log(res);
-            return done(null, res);
-        });
-    }
-));
-
-
-passport.serializeUser(function(user, cb) {
-    cb(null, user._id);
-});
-
-passport.deserializeUser(function(id, cb) {
-    UserData.findById(id).then(res => {
-        cb(null, res);
-    }).catch(err => {
-        cb(err, null);
-    });
-});
-
-
-
-
-
 const app = express();
 
 const static = express.static(__dirname + '/public');
@@ -70,32 +43,76 @@ const rewriteUnsupportedBrowserMethods = (req, res, next) => {
 };
 
 app.use(function(req, res, next) {
-    console.log('req.method and url  is ' + req.method + " " + req.url);
-    next();
-})
+        console.log('req.method and url  is ' + req.method + " " + req.url);
+        console.log("req.flash--------------------:")
+        console.log(req.flash)
+        console.log('');
+        next();
+    })
 
-app.use(require('connect-flash')());
-app.use(require('cookie-parser')());
 
 
 app.use(require('express-session')({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    cookie: {
+        secure: false // true for https
+    }
 }));
-app.use(passport.initialize());
-app.use(passport.session());
+
+app.use(require('connect-flash')());
+app.use(require('cookie-parser')());
 
 
 app.use("/public", static);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(rewriteUnsupportedBrowserMethods);
 
 app.engine('handlebars', handlebarsInstance.engine);
 app.set('view engine', 'handlebars');
+
+
+
+//   -------- setup passport  ----------
+passport.use(new LocalStrategy({
+    passReqToCallback: true},
+    function(req, username, password, done) {
+        UserData.findOne(username,password).then(res => {
+            console.log('user test found :');
+            console.log(res);
+            return done(null, res);
+        })
+        .catch(err => {
+            console.log('login falied: '+err);
+            return done(null, false, req.flash('message',err));
+        });
+    }
+));
+
+passport.serializeUser(function(user, cb) {
+    cb(null, user._id);
+});
+
+passport.deserializeUser(function(id, cb) {
+    UserData.findById(id).then(res => {
+        cb(null, res);
+    }).catch(err => {
+        cb(err, null);
+    });
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
 
 configRoutes(app);
 
